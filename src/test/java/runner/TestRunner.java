@@ -14,7 +14,7 @@ import org.junit.runner.RunWith;
 
         features = "src/test/resources/features",
         glue = "step_defs",
-        dryRun = false,
+        dryRun = true,
         snippets = CucumberOptions.SnippetType.CAMELCASE,
         tags = "@US2"
 

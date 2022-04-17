@@ -24,12 +24,14 @@ public class US1_stepDef {
     @When("Execute {string} query to get total number of all IDs from users")
     public void executeQueryToGetAllIDsFromUsers(String query) throws SQLException {
         ResultSet rs = JdbcUtils.assignQuery(query);
+
         totalId = Integer.parseInt(JdbcUtils.getSingularValue(rs));
     }
 
     @When("Execute {string} query to get all unique total number IDs from users")
     public void executeQueryToGetAllUniqueTotalNumberIDsFromUsers(String query) {
         ResultSet rs = JdbcUtils.assignQuery(query);
+
         uniqueTotalId = Integer.parseInt(JdbcUtils.getSingularValue(rs));
 
     }

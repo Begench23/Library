@@ -12,8 +12,6 @@ Feature: As a data consumer, I want the user information
 #      |"Select * from books"|
     Then verify all users has unique ID
 
-  @US2
-
   Scenario: verify users table columns
     Given Establish the database connection
 
