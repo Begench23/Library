@@ -86,6 +86,19 @@ public class JdbcUtils {
         return columnNames;
     }
 
+    public static int getRowsNumberOfQuery(ResultSet rs) {
+
+        int rows = 0;
+        try {
+            rs.beforeFirst();
+            while (rs.next()) {
+                rows++;
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return rows;
+    }
 
 
 
